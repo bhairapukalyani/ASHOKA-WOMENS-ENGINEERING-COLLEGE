@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashoka Women's Engineering College - Empowering Women in Technology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+        /* Global Styles */
+        :root {
+            --primary-color: #6a1b9a;
+            --secondary-color: #ffab00;
+            --accent-color: #7b1fa2;
+            --dark-color: #4a148c;
+            --light-color: #f3e5f5;
+            --text-color: #333;
+            --text-light: #666;
+            --white: #fff;
+            --black: #000;
+            --gray: #f5f5f5;
+            --dark-gray: #e0e0e0;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-color);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+         background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Header Styles */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .college-logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .logo-text p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .main-nav .nav-list {
+            display: flex;
+
+        }
+
+        .main-nav .nav-link {
+            padding: 10px 15px;
+            font-weight: 500;
+            color: var(--text-color);
+            position: relative;
+        }
+
+        .main-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .main-nav .nav-link:hover::after {
+            width: calc(100% - 30px);
+        }
+
+        .contact-btn {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-left: 10px;
+        }
+
+        .contact-btn:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            background: url('https://www.ashokacollege.in/wp-content/uploads/2025/04/ashoka-banner-A17.jpg') no-repeat center center/cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-top: 80px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: var(--white);
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+         color:white;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* About Section */
+        .about-section {
+            background: var(--gray);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .about-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .about-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .about-card i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .about-image img {
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .achievements-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .achievements-list li {
+            margin-bottom: 8px;
+        }
+
+   /* Departments Section */
+      /* Departments Section */
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.department-card {
+    background: var(--light-color);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    color: white;
+    aspect-ratio: 1/1; /* This makes the cards square */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.department-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.department-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+.department-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dept-icon {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.department-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.dept-courses {
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    list-style: none;
+    padding: 0;
+}
+
+.dept-courses li {
+    margin-bottom: 8px;
+}
+
+.dept-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--white);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.dept-link:hover {
+    color: var(--secondary-color);
+}         
+        /* Campus Life Section */
+        .campus-section {
+            background: var(--gray);
+        }
+
+        .campus-tabs {
+            margin-top: 40px;
+        }
+
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 10px;
+        }
+
+        .tab-btn {
+            padding: 10px 25px;
+            background: transparent;
+            border: none;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .tab-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .event-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .event-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .event-info {
+            padding: 20px;
+        }
+
+        .event-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .event-date {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .clubs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .club-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .club-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .club-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .club-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .facilities-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .facility-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .facility-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .facility-card h3 {
+            padding: 15px;
+            color: var(--primary-color);
+        }
+
+        .facility-card p {
+            padding: 0 15px 15px;
+            color: var(--text-light);
+        }
+/* Achievements Section */
+.achievements-section {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.achievement-card {
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    aspect-ratio: 1/1; /* Square shape */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.achievement-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.achievement-card p {
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+}
+
+.achievement-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+
+
+        /* Placements Section */
+        .placements-section {
+            background: var(--gray);
+        }
+
+        .placement-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-card h3 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .companies-grid {
+            margin: 60px 0;
+        }
+
+        .companies-grid h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .company-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .company-logos img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .company-logos img:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+
+        .placement-testimonials {
+            margin-top: 60px;
+        }
+
+        .placement-testimonials h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .testimonial-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .testimonial-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-content h4 {
+            color: var(--primary-color);
+            margin-top: 10px;
+        }
+
+        .testimonial-content span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background: var(--white);
+        }
+
+        .gallery-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .gallery-tab {
+            padding: 8px 20px;
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            border-radius: 50px;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .gallery-tab.active {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 250px;
+            box-shadow: var(--shadow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: var(--white);
+            padding: 20px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            display: block;
+            margin: 50px auto;
+            max-width: 80%;
+            max-height: 80vh;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: var(--white);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .modal-caption {
+            margin: 15px auto;
+            text-align: center;
+            color: var(--white);
+            max-width: 80%;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--gray);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .info-card i {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .info-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--dark-gray);
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-color);
+        }
+
+        /* Map Section */
+        .map-section {
+            height: 450px;
+        }
+
+        .map-section iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 0;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-col {
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            color: var(--dark-color);
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .newsletter-form button {
+            background: var(--secondary-color);
+            color: var(--dark-color);
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 5px 5px 0;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px 0;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            .main-nav .nav-list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                margin-top: 20px;
+            }
+            
+            .main-nav .nav-list.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo and Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="https://www.facultyplus.com/wp-content/uploads/2021/10/download-1.png" alt="Ashoka Women's Engineering College Logo" class="college-logo">
+                <div class="logo-text">
+
+                    <h1 style="font-size:35px;" >Ashoka Women's Engineering College</h1>
+                    <p>Empowering Women Through Technical Education</p>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#departments" class="nav-link">Departments</a></li>
+                    <li><a href="#campus-life" class="nav-link">Campus Life</a></li>
+                    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                    <li><a href="#placements" class="nav-link">Placements</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link contact-btn">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Shaping the Future of Women in Engineering</h2>
+            <p class="hero-subtitle">Join India's premier institution for women in technical education</p>
+            <div class="hero-btns">
+                <a href="#admissions" class="btn-primary">Admissions 2024</a>
+                <a href="#virtual-tour" class="btn-secondary">Virtual Tour</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="section-container">
+            <h2 class="section-title">About Our College</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3><i class="fas fa-landmark"></i> Our History</h3>
+                        <p>Founded in 2008, Ashoka Women's Engineering College has been a pioneer in women's technical education in the region. From humble beginnings with just two departments, we've grown to become a center of excellence with state-of-the-art facilities.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                        <p>Think Ashoka Think Placements.To empower women through quality technical education, fostering innovation, leadership, and social responsibility while bridging the gender gap in STEM fields.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3><i class="fas fa-trophy"></i> Achievements</h3>
+                        <ul class="achievements-list">
+                            <li>NAAC 'A' Grade Accredited</li>
+                            <li>Ranked among top 10 women's engineering colleges in the state</li>
+                            <li>90% placement rate in 2024</li>
+                            <li>Recipient of "Best Emerging Engineering College" award</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image">
+<img src="https://content3.jdmagicbox.com/comp/kurnool/k6/9999p8518.8518.090616110946.s5k6/catalogue/ashoka-women-s-engineering-college-kallur-road-kurnool-engineering-colleges-enr92787hf.jpg" alt="College Building">
+<img src="https://akm-img-a-in.tosshub.com/sites/resources/campus/prod/img/campusview/2023/10/4c3a4d9d939061269591917342.jpg" alt="College Building">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Departments Section -->
+<!-- Departments Section -->
+<section id="departments" class="section departments-section">
+    <div class="section-container">
+        <h2 class="section-title">Departments & Courses</h2>
+        <p class="section-subtitle">Explore our wide range of technical programs</p>
+        
+        <div class="departments-grid">
+            <div class="department-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80') no-repeat center center/cover;">
+                <div class="dept-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Computer Science & Engineering</h3>
+                <ul class="dept-courses">
+                    <li>B.Tech (CSE)</li>
+                    <li>M.Tech (Data Science)</li>
+                    <li>Ph.D (Computer Science)</li>
+                </ul>
+                <a href="#" class="dept-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="department-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80') no-repeat center center/cover;">
+                <div class="dept-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Electrical & Electronics Engineering</h3>
+                <ul class="dept-courses">
+                    <li>B.Tech (EEE)</li>
+                    <li>M.Tech (Power Systems)</li>
+                </ul>
+                <a href="#" class="dept-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="department-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80') no-repeat center center/cover;">
+                <div class="dept-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Electronics & Communication  Engineering</h3>
+                <ul class="dept-courses">
+                    <li>B.Tech (ME)</li>
+                    <li>M.Tech (Thermal Engineering)</li>
+                </ul>
+                <a href="#" class="dept-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="department-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80') no-repeat center center/cover;">
+                <div class="dept-icon">
+                    <i class="fas fa-atom"></i>
+                </div>
+                <h3>Artificial Intelligence & Data Science</h3>
+                <ul class="dept-courses">
+                    <li>B.Tech (AI & DS)</li>
+                    <li>M.Tech (Machine Learning)</li>
+                </ul>
+                <a href="#" class="dept-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>    
+    <!-- Campus Life Section -->
+    <section id="campus-life" class="section campus-section">
+        <div class="section-container">
+            <h2 class="section-title">Campus Life</h2>
+            <p class="section-subtitle">Experience the vibrant life at AWEC</p>
+            
+            <div class="campus-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="events">Events</button>
+                    <button class="tab-btn" data-tab="clubs">Clubs</button>
+                    <button class="tab-btn" data-tab="facilities">Facilities</button>
+                </div>
+                
+                <div class="tab-content active" id="events">
+                    <div class="events-grid">
+                        <div class="event-card">
+                            <img src="https://www.ashokacollege.in/wp-content/uploads/2023/10/8.jpg" alt="Tech Fest">
+                            <div class="event-info">
+                                <h3>Saachi</h3>
+                                <p>Annual technical festival showcasing innovation and research by our students</p>
+                                <span class="event-date">March 15-17, 2024</span>
+                            </div>
+                        </div>
+                        <div class="event-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSraVkdFTki1OorkR6z4dI5EQ7w-B69fopDls6YI6G5E9Oq0d2btzwUU0jxYmxQ2WHLSew&usqp=CAU" alt="Cultural Fest">
+                            <div class="event-info">
+                                <h3>E-Cube Carnival</h3>
+                                <p>Cultural festival celebrating art, music, and dance from across India</p>
+                                <span class="event-date">October 5-7, 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="clubs">
+                    <div class="clubs-grid">
+                        <div class="club-card">
+                            <i class="fas fa-robot club-icon"></i>
+                            <h3>Robotics Club</h3>
+                            <p>Explore the world of robotics through workshops, competitions, and projects</p>
+                            <a href="#" class="dept-link">Join Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        
+                        <div class="club-card">
+                            <i class="fas fa-code club-icon"></i>
+                            <h3>CodeHers</h3>
+                            <p>Programming club for competitive coding, hackathons, and open source contributions</p>
+                            <a href="#" class="dept-link">Join Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        
+                        <div class="club-card">
+                            <i class="fas fa-leaf club-icon"></i>
+                            <h3>Eco Warriors</h3>
+                            <p>Sustainability club focused on environmental awareness and green initiatives</p>
+                            <a href="#" class="dept-link">Join Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        
+                        <div class="club-card">
+                            <i class="fas fa-microphone club-icon"></i>
+                            <h3>Orators Club</h3>
+                            <p>Develop public speaking and leadership skills through debates and discussions</p>
+                            <a href="#" class="dept-link">Join Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="facilities">
+                    <div class="facilities-slider">
+                        <div class="facility-card">
+                            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Library">
+                            <h3>Central Library</h3>
+                            <p>Fully-stocked with 50,000+ books, journals, and digital resources</p>
+                        </div>
+                        
+                        <div class="facility-card">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Laboratory">
+                            <h3>Advanced Laboratories</h3>
+                            <p>State-of-the-art labs for all engineering disciplines with modern equipment</p>
+                        </div>
+                        
+                        <div class="facility-card">
+                            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Sports Complex">
+                            <h3>Sports Complex</h3>
+                            <p>Indoor and outdoor facilities for basketball, badminton, yoga, and more</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Achievements Section -->
+<section id="achievements" class="section achievements-section">
+    <div class="section-container">
+        <h2 class="section-title">Our Achievements</h2>
+        <p class="section-subtitle">Celebrating our milestones and successes</p>
+        
+        <div class="achievements-grid">
+            <!-- Achievement 1 -->
+            <div class="achievement-card" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://assets.thehansindia.com/h-upload/2025/02/16/1524522-ashoka.webp') no-repeat center center/cover;">
+                <div class="achievement-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>5000+ Graduates</h3>
+                <p>Successful alumni working in top companies worldwide</p>
+                <div class="achievement-number">5000+</div>
+            </div>
+            
+            <!-- Achievement 2 -->
+            <div class="achievement-card" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://www.ashokacollege.in/wp-content/uploads/2024/05/xx-241x300.png') no-repeat center center/cover;">
+                <div class="achievement-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Industry Partnerships</h3>
+                <p>
+Awarded the Prestigious ” Atal Achievement Award for Placements” in 2022</p>
+                <div class="achievement-number">100+</div>
+            </div>
+            
+            <!-- Achievement 3 -->
+            <div class="achievement-card" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://www.ashokacollege.in/wp-content/uploads/2025/04/best-woment-college-in-2021.jpg') no-repeat center center/cover;">
+                <div class="achievement-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Research Papers</h3>
+                <p>” Best Women’s Engineering College in A.P for Placements” by ZEE BUSINESS at Iconic Education Summit, New Delhi 2021</p>
+                <div class="achievement-number">250+</div>
+            </div>
+            
+            <!-- Achievement 4 -->
+            <div class="achievement-card" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://www.ashokacollege.in/wp-content/uploads/2025/04/recognitions-bestengineering-college-2018.jpg') no-repeat center center/cover;">
+                <div class="achievement-icon">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <h3>Awards Won</h3>
+                <p>Awarded as “Best Engineering College for Women in A.P” by India Today at World Education Summit & Awards 2018</p>
+                <div class="achievement-number">50+</div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Placements Section -->
+    <section id="placements" class="section placements-section">
+        <div class="section-container">
+            <h2 class="section-title">Placements & Careers</h2>
+            <p class="section-subtitle">Launching successful careers in top companies</p>
+            
+            <div class="placement-stats">
+                <div class="stat-card">
+                    <h3>92%</h3>
+                    <p>Placement Rate (2024)</p>
+                </div>
+                <div class="stat-card">
+                    <h3>8.5 LPA</h3>
+                    <p>Average Package</p>
+                </div>
+                <div class="stat-card">
+                    <h3>22 LPA</h3>
+                    <p>Highest Package</p>
+                </div>
+                <div class="stat-card">
+                    <h3>75+</h3>
+                    <p>Recruiting Companies</p>
+                </div>
+            </div>
+            
+            <div class="companies-grid">
+                <h3>Our Recruiters</h3>
+                <div class="company-logos">
+                    <img src="https://icon2.cleanpng.com/20240216/yhs/transparent-google-logo-google-logo-with-colorful-letters-on-black-1710875297222.webp" alt="Google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1024px-Microsoft_logo.svg.png" alt="Microsoft">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMFQZcCPPNKXxH3qKZj3Tk7nS0D7Nq-9twUw&s" alt="Amazon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9vubwgRZOaqIJJbF3vPsEDkSTDam3e7CWkw&s" alt="Infosys">
+                    <img src="https://assets.entrepreneur.com/content/3x2/2000/1736510278-Untitleddesign16.jpg" alt="TCS">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wipro_Primary_Logo_Color_RGB.svg/1200px-Wipro_Primary_Logo_Color_RGB.svg.png" alt="Wipro">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFRWT-hcJ-f4BG_ugvMwfcUCMKFsfCaC3kaw&s" alt="IBM">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Accenture_logo.svg" alt="Accenture">
+                </div>
+            </div>
+            
+            <div class="placement-testimonials">
+                <h3>Success Stories</h3>
+                <div class="testimonial-slider">
+                    <div class="testimonial-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRN70TMUJGw6Qq7IQ43v-DewqRfiO1CPSUpg&s" alt="Alumni">
+                        <div class="testimonial-content">
+                            <p>"The placement training at AWEC gave me the confidence to crack interviews at top tech companies. I'm now working as a software engineer at Google."</p>
+                            <h4>S.K.Najiya</h4>
+                            <span>B.Tech CSE, 2022 | Google</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://content.jdmagicbox.com/v2/comp/kurnool/x6/9999p8518.8518.240425184656.h2x6/catalogue/ashoka-women-s-college-off-campus-chinnatekur-kurnool-technical-institutes-q68vv0cm74-250.jpg" alt="Alumni">
+                        <div class="testimonial-content">
+                            <p>"The strong technical foundation I received at AWEC helped me excel in my career. I'm currently leading a team of engineers at Amazon."</p>
+                            <h4>Lavanya</h4>
+                            <span>B.Tech EEE, 2018 | Amazon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+        <div class="section-container">
+            <h2 class="section-title">Campus Gallery</h2>
+            <p class="section-subtitle">Explore life at AWEC through our photos</p>
+            
+            <div class="gallery-tabs">
+                <button class="gallery-tab active" data-gallery="all">All</button>
+                <button class="gallery-tab" data-gallery="campus">Campus</button>
+                <button class="gallery-tab" data-gallery="events">Events</button>
+                <button class="gallery-tab" data-gallery="students">Student Life</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="campus">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQFg8F6z8ffEKtlKYSeZhh-lm4QIJMDJJ5cg&s" alt="College Building">
+                    <div class="gallery-overlay">
+                        <h3>Main Academic Block</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="https://content3.jdmagicbox.com/comp/kurnool/k6/9999p8518.8518.090616110946.s5k6/catalogue/ashoka-women-s-engineering-college-kallur-road-kurnool-engineering-colleges-enr92787hf.jpg" alt="Tech Fest">
+                    <div class="gallery-overlay">
+                        <h3>Annual Tech Festival</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="students">
+                    <img src="https://assets.thehansindia.com/h-upload/2025/02/16/1524522-ashoka.webp" alt="Students">
+                    <div class="gallery-overlay">
+                        <h3>Student Discussion</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="campus">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGWTMhnklkXJ1SNwCb4KZngyneEizayzmibw&s" alt="Library">
+                    <div class="gallery-overlay">
+                        <h3>Central Library</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQogJ-gNbPXj6iWdNsN7-MIciaRvdajaW5b_qmitJVgI-m8AzJFVhzkrdvMOfW4uk48Gm4&usqp=CAU" alt="Cultural Fest">
+                    <div class="gallery-overlay">
+                        <h3>Cultural Performance</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="students">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCFUHXawID5cAe-v-LBG3OE1k7rexadOHYTiL_sYXHP7JyXqzrp_cXXE71J-QtnACDeOE&usqp=CAU" alt="Sports">
+                    <div class="gallery-overlay">
+                        <h3>Sports Day</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Gallery Modal -->
+        <div class="gallery-modal">
+            <span class="close-modal">&times;</span>
+            <img class="modal-content" id="modal-image">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="section-container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Get in touch for admissions and more information</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <p>Ashoka Women's Engineering College<br>
+                        Kurnool<br>
+                       Andhra Pradhesh,518380</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Phone</h3>
+                        <p>Admissions: +91 9876543210<br>
+                        General Enquiry: +91 9876543211<br>
+                        Fax: 040-12345678</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>admissions@awec.edu.in<br>
+                        info@awec.edu.in<br>
+                        placement@awec.edu.in</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Select Department</option>
+                                <option>Admissions</option>
+                                <option>Placements</option>
+                                <option>Computer Science</option>
+                                <option>Electrical Engineering</option>
+                                <option>Mechanical Engineering</option>
+                                <option>AI & Data Science</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+<img src="" https://www.ashokacollege.in/wp-content/uploads/2025/04/ashoka-banner-A19.jpg>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy7Aj7Uqfbo08Q6SEfsC6oSc4SFXVTGXbcGw&s" alt="College Logo" class="footer-logo">
+                <p>Ashoka Women's Engineering College is committed to empowering women through quality technical education and research.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#departments">Departments</a></li>
+                    <li><a href="#admissions">Admissions</a></li>
+                    <li><a href="#placements">Placements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Important Links</h3>
+                <ul>
+                    <li><a href="#">Academic Calendar</a></li>
+                    <li><a href="#">Examination</a></li>
+                    <li><a href="#">Scholarships</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Alumni</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest updates and news.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ashoka Women's Engineering College. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navList = document.querySelector('.nav-list');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navList.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Tab Functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Gallery Tab Functionality
+        const galleryTabs = document.querySelectorAll('.gallery-tab');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        galleryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const galleryCategory = tab.getAttribute('data-gallery');
+                
+                // Remove active class from all tabs
+                galleryTabs.forEach(tab => tab.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Show/hide gallery items based on category
+                galleryItems.forEach(item => {
+                    if (galleryCategory === 'all' || item.getAttribute('data-category') === galleryCategory) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Gallery Modal
+        const galleryModal = document.querySelector('.gallery-modal');
+        const modalImg = document.getElementById('modal-image');
+        const modalCaption = document.getElementById('modal-caption');
+        const closeModal = document.querySelector('.close-modal');
+        
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', () => {
+                galleryModal.style.display = 'block';
+                modalImg.src = img.src;
+                modalCaption.textContent = img.alt;
+            });
+        });
+        
+        closeModal.addEventListener('click', () => {
+            galleryModal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside the image
+        window.addEventListener('click', (e) => {
+            if (e.target === galleryModal) {
+                galleryModal.style.display = 'none';
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navList.classList.contains('active')) {
+                        navList.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
